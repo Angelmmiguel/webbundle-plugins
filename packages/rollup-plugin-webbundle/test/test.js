@@ -71,6 +71,7 @@ function parseWebBundle(buf) {
 test('simple', async (t) => {
   const bundle = await rollup.rollup({
     input: 'fixtures/index.js',
+    strictDeprecations: true,
     plugins: [
       webbundle({
         baseURL: 'https://wbn.example.com/',
