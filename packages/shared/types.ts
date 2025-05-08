@@ -43,6 +43,7 @@ const baseOptionsSchema = z.strictObject({
   headerOverride: z
     .union([z.function().returns(headersSchema), headersSchema])
     .optional(),
+  debug: z.boolean().optional(),
 });
 
 const nonSigningSchema = baseOptionsSchema.extend({
